@@ -30,10 +30,11 @@ def main():
     """ The entry point to extract-bc.
     """
     try:
-        extraction()
+        rc = extraction()
     except Exception:
+        rc = 1
         pass
-    return 0
+    return rc
 
 if __name__ == '__main__':
     sys.exit(main())
